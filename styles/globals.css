@@ -5,7 +5,7 @@
 
 @layer base {
     body{
-        @apply bg-[#141414] text-white ;
+        @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-slate-500 !scrollbar-thumb-red-600; /*tailwind-scrollba package*/
     }
 
     header{
@@ -42,7 +42,39 @@
         transition hover:opacity-30
         md:py-2.5 md:px-8 md:text-sm
     }
+}
 
+@layer utilities{
+    @variants responsive {
+        /* Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+    
+        .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+      }
+
+      .parallax {
+      
+        /* Full height */
+        height: 100%;
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+      @media only screen and (max-device-width: 1366px) {
+          .parallax {
+            background-attachment: scroll;
+          }
+        }
 }
 
 
