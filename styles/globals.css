@@ -5,7 +5,8 @@
 
 @layer base {
     body{
-        @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-slate-500 !scrollbar-thumb-red-600; /*tailwind-scrollba package*/
+        @apply 
+        bg-[#141414] text-white !scrollbar-thin !scrollbar-track-slate-500 !scrollbar-thumb-red-600; /*tailwind-scrollba package*/
     }
 
     header{
@@ -41,6 +42,9 @@
         font-semibold 
         transition hover:opacity-30
         md:py-2.5 md:px-8 md:text-sm
+    }
+    .input{
+        @apply w-full rounded bg-[#333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454544]; 
     }
 }
 

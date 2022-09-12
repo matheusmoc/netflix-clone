@@ -13,9 +13,7 @@ function Thumbnail({ movie }: Props) {
   const [RemoveLoad, setRemoveLoad] = useState(false)
 
   useEffect(()=>{
-    setTimeout(()=>{
       setRemoveLoad(true);
-    },10000)
   })
   return (
     <>      
