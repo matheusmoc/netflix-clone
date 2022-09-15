@@ -58,6 +58,11 @@
         bg-[#2a2a2a]/60
         transition delay-75 hover:border-white hover:bg-white/10
     }
+
+    .backDropBlur{
+        @apply
+        !backdrop-blur-sm
+    }
 }
 
 @layer utilities{
