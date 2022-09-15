@@ -16,7 +16,7 @@ function Thumbnail({ movie }: Props) {
   const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
 
   useEffect(() => {
-    setRemoveLoad(true);
+    setRemoveLoad(false);
   });
   return (
     <>
